@@ -60,5 +60,5 @@ file -> settings
     换行直接回车即可，自动替你排版。
 
 ## C/C++编译环境
-
+摘自
 [Atom安装并配置C/C++开发环境](http://blog.csdn.net/qq_36731677/article/details/54609583)
