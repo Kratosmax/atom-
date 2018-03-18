@@ -10,7 +10,7 @@
 ##### 先学会如何安装插件，atom的核心就是各种插件。下面以装汉化包为例。
 file -> settings
 
-![](.png)
+![1](1.png)
 
 点install，然后在输入栏输入你要的插件的名字，一般是英文，因为一般汉化包的名字都有个Chinese，所以输入Chinese，可以点击package搜索，也可以直接回车，我们选择第一个simplified-chinese-menu，因为这个汉化最彻底最完全（插件自己的界面没有汉化别想了），点蓝色的install，等待一会，当出现Uninstall（卸载）说明已经安装成功了，disable是禁用的意思，enable是启用的意思。
 
@@ -60,5 +60,95 @@ file -> settings
     换行直接回车即可，自动替你排版。
 
 ## C/C++编译环境
-摘自
-[Atom安装并配置C/C++开发环境](http://blog.csdn.net/qq_36731677/article/details/54609583)
+我是从这里学的，把原地址放上[Atom安装并配置C/C++开发环境](http://blog.csdn.net/qq_36731677/article/details/54609583)
+
+#### MinGW的安装
+在windows上安装gcc/g++并不像Linux上那么简单，所以我从这个博主那里学到了一个方法，用MinGW来安装，[MinGW的官网下载链接](https://sourceforge.net/projects/mingw/files/), 安装的过程就是一直continue就好了
+
+![读条](读条.png)
+
+到这里就等待就好了，好了之后也是continue，接着会自动弹出MinGW
+
+![选择](选择.png)
+
+选择basic setup的mingw-gcc-g++点一下，mark for installation。
+然后点击左上角的installation，然后apply changes，接下来再apply就可以了，
+安装好了之后配置环境变量，右键我的电脑，打开“系统属性”，打开“环境变量” 。
+在“系统变量”中选择“Path”并点击“编辑”
+点击“新建”，并输入“C:\MinGW\bin”也就是minGW的安装路径，如果改了就改成一样就好了
+
+
+![cmd](cmd.png)
+
+配置好了之后在cmd输入gcc -v检查版本，如果有输出说明装成功了
+
+#### linter-gcc和linter的安装
+
+如果安装好了gcc，我相信这一步对你来说很简单了，搜索上面这两个插件并安装，下载好了之后
+
+
+![设置](设置.png)
+
+在这里进入设置
+
+
+![gcc](gcc.png)
+
+设置为gcc/g++ (一般情况下用gcc编译c文件，用g++编译cpp文件，也就是C++。),如果是C语言的话，建议填gcc，
+
+![随时](随时.png)
+
+建议勾上这个，这个勾上后可以一边写一边报错，如果不勾则每一次保存或者编译才会报错，下面的数字代表着多少毫秒更新一次，比如我打了一行代码，100毫秒后会在这行代码的前面有红色的点（警告错误）或者黄色(提醒)，如果不喜欢频繁提醒，可以调高时间(默认300ms)或者关闭。
+
+
+![左下角](左下角.png)
+
+默认linter是在左下角的，点一下就弹出来了，可以拖动到左边，右边，或者下面
+
+
+![实例1](实例1.png)
+![实例2](实例2.png)
+
+#### gcc-make-run的安装
+到这里其实已经可以写代码了，但是我还得复制代码去别的地方编译，麻烦，我直接安装这个插件一键调出就好啦
+
+安装就不教了，到这里不可能还不会，直接讲使用，按下F6可以直接编译
+
+![编译](编译.png)
+
+弹出绿色说明成功了
+
+![成功](成功.png)
+
+但是有些人编译出来发现中文是乱码，怎么办呢，右下角的UTF-8点一下，输入GBK，搞定。但是每次都需要改，好麻烦，那么这里改成默认gbk啊hhhhhhhh
+
+![utf8想杀人](utf8想杀人.png)
+
+现在，你可以在atom随心所欲了。
+
+## 进阶
+相信做了这么多，已经差不多掌握基本的atom操作方法了，那么就需要~~装逼~~方便的工具啦，
+
+1.atom-beautify
+
+    在Atom中美化代码的格式，比如HTML，CSS，JavaScript，PHP，Python，Ruby，Java，
+    C，C ++，C＃，Objective-C，CoffeeScript，TypeScript，Coldfusion，
+    SQL反正好多都可以，巨神奇
+
+2.atom-html-preview + autocomplete-html-entities
+
+    前者用来渲染html，后者给html更完善的自动补全
+
+3.color-picker
+
+    我相信不仅仅是我不会计算颜色，用这个你就可以直接用CTRL+alt+C选色，
+    建议在设置里把RGB改成HEX，atom的rgb有点问题，hex就很正常
+
+4.file-icons
+
+    这是用来显示文件图标的hhhhhhh好看
+![图标](图标.png)
+
+5.git-plus
+
+    用git基本都要装，有这个好用很多，方便，ctrl+shift+P调出直接就可以了，就是要在gitbash声明自己先
