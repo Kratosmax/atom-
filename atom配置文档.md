@@ -10,8 +10,6 @@
 ##### 先学会如何安装插件，atom的核心就是各种插件。下面以装汉化包为例。
 file -> settings
 
-![1](1.png)
-
 点install，然后在输入栏输入你要的插件的名字，一般是英文，因为一般汉化包的名字都有个Chinese，所以输入Chinese，可以点击package搜索，也可以直接回车，我们选择第一个simplified-chinese-menu，因为这个汉化最彻底最完全（插件自己的界面没有汉化别想了），点蓝色的install，等待一会，当出现Uninstall（卸载）说明已经安装成功了，disable是禁用的意思，enable是启用的意思。
 
 ![setting](setting.png)
@@ -67,12 +65,12 @@ file -> settings
 
 ![读条](读条.png)
 
-到这里就等待就好了，好了之后也是continue，接着会自动弹出MinGW
+到这里就等待就好了，安装的过程中需要下载几次，耐心等待continue按钮出来，好了之后也是continue，接着会自动弹出MinGW
 
 ![选择](选择.png)
 
 选择basic setup的mingw-gcc-g++点一下，mark for installation。
-然后点击左上角的installation，然后apply changes，接下来再apply就可以了，
+然后点击左上角的installation，然后apply changes，接下来再apply就可以了，这里也是安装几次，成功后会出现close按钮，
 安装好了之后配置环境变量，右键我的电脑，打开“系统属性”，打开“环境变量” 。
 在“系统变量”中选择“Path”并点击“编辑”
 点击“新建”，并输入“C:\MinGW\bin”也就是minGW的安装路径，如果改了就改成一样就好了
@@ -152,3 +150,4 @@ file -> settings
 5.git-plus
 
     用git基本都要装，有这个好用很多，方便，ctrl+shift+P调出直接就可以了，就是要在gitbash声明自己先
+![配置git](配置git.png)
